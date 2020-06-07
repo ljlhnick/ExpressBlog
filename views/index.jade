@@ -1,0 +1,76 @@
+extends layout
+
+block content
+  //
+    h1= title
+    p Welcome to #{title}
+  .contain
+    div.header
+      img(src="/images/100835_top.jpg")
+      div.nav
+        ul
+          li
+            a(href="#") 你是最美的风景
+          li
+            a(href="#") 有你在就是晴天
+          li
+            a(href="#") 哈哈哈哈，你打不过我吧
+          li
+            a(href="#") 就是这么强大
+          li
+            a(href="#") hi
+    div.middle
+      .item
+        div.content
+          - if (path=="/")
+            block article
+          -else
+            block articleItem
+        div.sideBar
+          .userinfo
+            h3.title
+              用户中心
+            p.user
+              |ljlhnick-blog
+            p.welcome
+              |欢迎回来
+          .login
+            h3.title
+              登录
+            .form
+              input(type="text",placeholder="请输入您的用户名")
+              input(type="password",placeholder="请输入您的密码")
+          .register
+            h3.title
+              注册
+            .form
+              input(type="text",placeholder="请输入您的用户名")
+              input(type="password",placeholder="请输入您的密码")
+              input(type="password",placeholder="请再次输入您的密码")
+      div.slider
+        .item
+          img(src="/images/100835_top.jpg")
+          p.title.
+            node.js难不难
+          p.date.
+            2015-04-13
+        .item
+          img(src="/images/102802_top.jpg")
+          p.title.
+            jq难不难
+          p.date.
+            2015-10-13
+        .item
+          img(src="/images/105698_top.jpg")
+          p.title.
+            css3难不难
+          p.date.
+            2015-08-01
+        .item
+          img(src="/images/107774_top.jpg")
+          p.title.
+            vue.js难不难
+          p.date.
+            2016-01-01
+    div.footer
+      p.desc 哈哈哈哈
